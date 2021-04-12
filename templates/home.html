@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Stroke prediction</title>
+  <style>
+    *{
+      text-align:center;
+      background-color:cyan
+    }
+    
+    #hp{
+      background-color:white;
+      color:red;
+      height:20px;
+      
+      
+      
+    } 
+    h3{
+      font-size:20px
+    }
+    
+   
+    button{
+      background-color:white
+      
+    }
+    button:hover{
+      background-color:pink
+    }
+  </style>
+</head>
+<body>
+<form action="{{url_for('predict')}}" method="POST">
+<h3>Enter your gender<br></h3><select name="gender" id="hp">
+<option value="male">male</option>
+<option value="female">female</option>
+</select><br>
+<h3>Enter your age</h3><br><input name="age" required="required" id="hp">
+<h3>Do you have hypertension</h3><br><select name="hypertension" id="hp">
+                                     <option value="yes">yes</option>
+                                     <option value="no">no</option>
+                                     </select>
+<h3>Do you have heart disease</h3><br><select name="heart_disease" id="hp">
+                                      <option value="yes">yes</option>
+                                      <option values="no">no</option>
+                                      </select>
+<h3>Ever married</h3><br><select name="ever_married" id="hp">
+                          <option value="yes">yes</option>
+                          <option value="no">no</option>
+                          </select>
+<h3>enter your residence type</h3><br><select name="Residence_type" id="hp">
+                                      <option value="urban">urban</option>
+                                      <option value="rural">rural</option>
+                                      </select>                         
+                          
+<h3>Enter your average glucose level</h3><br><input name="avg_glucose_level" required="required" id="hp">
+<h3>Enter your bmi</h3><br><input name="bmi" required="required" id="hp">
+<h3>Enter your smoking status</h3><br><select name="smoking_status" id="hp">
+                                      <option value="formerly smoked">formerly smoked</option>
+                                      <option value="never smoked">never smoked</option>
+                                      <option value="smokes">smokes</option>
+                                      <option value="unknown">unknown</option>
+                                      </select>
+                                                    <br>                                                                                     
+<br><button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+<br>
+
+</body>
+</html>
+
+
